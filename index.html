@@ -17,9 +17,9 @@
                 </select>
                 <br> <br>
                 <label for="">Moeda de destino</label>
-                <select name="" id="">
-                    <option value="dolar">Dólar Americano</option>
-                    <option value="euro">Euro</option>
+                <select name="destino" id="destino">
+                    <option id="dolar" value="dolar">Dólar Americano</option>
+                    <option id="euro" value="euro">Euro</option>
                 </select>
                 <br> <br>
                 <label for="">Quantidade</label>
@@ -32,8 +32,22 @@
     </div>
 
     <script>
-        function converteMoeda(){
-            let 
+        botao.onclick = function(){
+            var valor = document.getElementById("quantidade");
+            var dolar = document.getElementById("dolar");
+            var euro = document.getElementById("euro");
+            var real = document.getElementById("real");
+            var origem = document.getElementById("origem");
+            var destino = document.getElementById("destino");
+
+            if (destino === dolar){
+                var resultado = 4.98*valor;
+                return resultado
+            }
+            if (destino === euro){
+                let resultado = 5.45*valor;
+                return resultado
+            }
         }
     </script>
 </body>
